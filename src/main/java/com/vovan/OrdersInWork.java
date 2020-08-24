@@ -1,16 +1,28 @@
 package com.vovan;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.List;
 import java.util.Objects;
-
+@Entity
 public class OrdersInWork {
+    @Id
+    @Column(name = "Id")
     private int id;
+    @Column(name = "clientId")
     private int clientId;
+    @Column(name = "adminId")
     private int adminId;
+    @Column(name = "price")
     private int price;
+    @Column(name = "shipmentCompany")
     private String shipmentCompany;
+    @Column(name = "isSelfShipment")
     private boolean isSelfShipment;
+    @Column(name = "isPayed")
     private boolean isPayed;
+    @Column(name = "goodList")
     private List<Good> goodList;
 
     public OrdersInWork(int id, int clientId, int adminId, String shipmentCompany, boolean isSelfShipment, List<Good> goodList) {

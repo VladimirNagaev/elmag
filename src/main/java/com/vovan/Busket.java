@@ -1,9 +1,7 @@
 package com.vovan;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 @Entity
 public class Busket {
@@ -14,7 +12,8 @@ public class Busket {
     @Column(name = "ClientId")
     private  int clientId;
     @Column(name = "goodList")
-    private List<Good> goodList;
+    @OneToMany(mappedBy = "id")
+    private List<Good> goodList = new ArrayList<>();
 
     public Busket(int clientId) {
         this.clientId = clientId;
