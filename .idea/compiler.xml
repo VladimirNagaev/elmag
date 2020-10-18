@@ -9,5 +9,8 @@
         <module name="elmag" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="elmag" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

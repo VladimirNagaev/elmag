@@ -1,6 +1,7 @@
 package com.vovan;
 
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.List;
@@ -22,7 +23,7 @@ public class OrdersInWork {
     private boolean isSelfShipment;
     @Column(name = "isPayed")
     private boolean isPayed;
-    @Column(name = "goodList")
+    @ElementCollection
     private List<Good> goodList;
 
     public OrdersInWork(int id, int clientId, int adminId, String shipmentCompany, boolean isSelfShipment, List<Good> goodList) {

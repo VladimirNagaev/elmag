@@ -32,6 +32,12 @@
       <version>5.4.20.Final</version>
     </dependency>
 
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-c3p0</artifactId>
+      <version>5.4.20.Final</version>
+    </dependency>
+
 
     <dependency>
       <groupId>junit</groupId>

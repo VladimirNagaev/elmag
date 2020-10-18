@@ -1,6 +1,7 @@
 package com.vovan;
 
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.List;
@@ -15,7 +16,7 @@ public class DoneOrdrs {
     private  int clientId;
     @Column(name = "status")
     private  String status;
-    @Column(name = "goodList")
+    @ElementCollection
     private List<Good> goodList;
 
     public DoneOrdrs(int idOfOrder, int adminId, int clientId, String status, List<Good> goodList) {

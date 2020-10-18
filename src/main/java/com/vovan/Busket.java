@@ -3,19 +3,23 @@ package com.vovan;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 public class Busket {
     @Id
     @GeneratedValue
     @Column(name = "Id")
     private int id;
-    @Column(name = "ClientId")
-    private  int clientId;
-    @Column(name = "goodList")
-    @OneToMany(mappedBy = "id")
+    //@Column(name = "ClientId")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ClientId")
+    private  Client clientId;
+    @ElementCollection
     private List<Good> goodList = new ArrayList<>();
 
-    public Busket(int clientId) {
+    public Busket(Client clientId) {
         this.clientId = clientId;
     }
 
@@ -30,11 +34,11 @@ public class Busket {
         this.id = id;
     }
 
-    public int getClientId() {
+    public Client getClientId() {
         return clientId;
     }
 
-    public void setClientId(int clientId) {
+    public void setClientId(Client clientId) {
         this.clientId = clientId;
     }
 
