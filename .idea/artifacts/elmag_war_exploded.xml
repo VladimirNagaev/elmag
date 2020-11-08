@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="elmag:war exploded">
+  <artifact type="exploded-war" build-on-make="true" name="elmag:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/elmag_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
@@ -38,14 +38,12 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.8.RELEASE" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
         </element>
         <element id="file-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-servlet.xml" />
         <element id="file-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <element id="directory" name="jsp">
-          <element id="dir-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
-        </element>
-        <element id="javaee-facet-resources" facet="elmag/web/Web" />
       </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp" />
     </root>
   </artifact>
 </component>

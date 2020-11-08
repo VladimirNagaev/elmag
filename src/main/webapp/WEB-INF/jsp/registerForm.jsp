@@ -1,6 +1,6 @@
 <html>
 <body>
-<form action="hello">
+<form action="register">
     UserName : <input type="text" name="name"/> <br><br>
     Password : <input type="text" name="pass"/> <br><br>
     Email : <input type="text" name="email"/> <br><br>
